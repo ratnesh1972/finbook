@@ -1,0 +1,143 @@
+/* Navbar Styles */
+.navbar-container{
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    padding: 0px 30px;
+    position: fixed;
+    top: 0px;
+    z-index: 20;
+    transition: .5s;
+}
+.navbar-container.top{
+    background: transparent;
+}
+.navbar-container .logo{
+    color: white;
+}
+.navbar-container h1{
+    margin: 0px;
+}
+.nav ul{
+    display: flex;
+}
+.nav ul li a{
+    padding: 10px 20px;
+    color: white;
+    margin: 0px 5px;
+    border-bottom: 1px solid none;
+}
+.nav ul li a:hover{
+    color: #f05454;
+    border-bottom: 1px solid #f05454;
+}
+/* Hero Section Styles */
+.hero{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+}
+.hero.blog{
+    height: 40vh;
+    width: 100%;
+    background: url('../images/blog.jpg') no-repeat center center/cover;
+}
+.hero .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    text-align: center;
+}
+.hero .content h1{
+    color: white;
+    font-size: 3rem;
+}
+.hero .content p{
+    color: white;
+    font-size: 1.2rem;
+    max-width: 600px;
+    padding: 10px;
+}
+.hero::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.hero .content * {
+    z-index: 10;
+}
+/* Form Styling */
+form, input, .btn-contact{
+    width: 100%;
+}
+.form-group{
+    margin: 10px 0px;
+}
+.form-control{
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+}
+.form-control:focus{
+    outline-color: #f05454;
+}
+/*Footer Styling*/
+.footer{
+    padding: 20px;
+    text-align: center;
+}
+.footer a{
+    margin: 10px;
+    color: #e8e8e8;
+}
+.footer a:hover{
+    color: #f05454;
+}
+/*Contact Section Padding Styling */
+.contact{
+    padding: 20px 0px 0px 0px !important;
+}
+.blog-section{
+    padding: 30px;
+}
+.blog-section img{
+    width: 300px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+/* Mobile Screen Style */
+@media (max-width:768px){
+    .navbar-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+    }
+    .navbar-container h1{
+        margin-bottom: 15px;
+    }
+    .nav ul li a {
+        padding: 10px 10px;
+    }
+    .hero .content h1{
+        color: white;
+        font-size: 2rem;
+    }
+    .navbar-container h1{
+        font-size: 1.5rem;
+    }
+}
